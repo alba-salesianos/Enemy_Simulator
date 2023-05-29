@@ -1,6 +1,8 @@
 package entities;
 
-public class Player {
+import entities.systems.Combat;
+
+public class Player implements Combat {
     private int health;
     private int defense;
     private int strength;
@@ -9,5 +11,21 @@ public class Player {
         this.health = 12;
         this.defense = defense;
         this.strength = strength;
+    }
+
+
+    @Override
+    public int attack() {
+        return this.strength;
+    }
+
+    @Override
+    public void takeDamage(int damage) {
+        if(damage > this.defense){
+            this.health = this.health - (damage - this.defense);
+            System.out.println("Daño recibido: " + (damage - this.defense) + "\nSalud restante: " + this.health);
+        } else {
+            System.out.println("Daño recibido: 0");
+        }
     }
 }
