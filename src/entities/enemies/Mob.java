@@ -1,7 +1,7 @@
 package entities.enemies;
 
 public abstract class Mob {
-    private int health;
+    protected int health;
 
     public Mob(int health) {
         this.health = health;
