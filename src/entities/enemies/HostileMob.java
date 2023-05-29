@@ -3,7 +3,7 @@ package entities.enemies;
 import entities.systems.Combat;
 
 public abstract class HostileMob extends Mob implements Combat {
-    private int strength;
+    protected int strength;
     public HostileMob(int health) {
         super(health);
     }
