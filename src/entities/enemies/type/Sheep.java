@@ -7,6 +7,10 @@ public class Sheep extends PacificMob {
         super(health);
     }
 
+    public int getHealth() {
+        return this.health;
+    }
+
     @Override
     public void move() {
         System.out.println("Se mueve por el campo.");

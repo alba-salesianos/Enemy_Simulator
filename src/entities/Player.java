@@ -13,6 +13,9 @@ public class Player implements Combat {
         this.strength = strength;
     }
 
+    public int getHealth() {
+        return this.health;
+    }
 
     @Override
     public int attack() {

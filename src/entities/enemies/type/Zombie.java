@@ -7,6 +7,11 @@ public class Zombie extends HostileMob {
         super(health);
         this.strength = 4;
     }
+
+    public int getHealth() {
+        return this.health;
+    }
+
     @Override
     public void move() {
         System.out.println("Se mueve hacia el personaje.");
