@@ -41,7 +41,7 @@ public class Main {
         }
 
         System.out.println("¿Qué armadura quieres usar?");
-        System.out.println("1. Ninguna \n2.De cuero \n3.De hierro \n4.De diamante");
+        System.out.println("1.Ninguna \n2.De cuero \n3.De hierro \n4.De diamante");
         option = keyboard.nextInt();
 
         switch (option) {
@@ -74,13 +74,15 @@ public class Main {
 
 
         System.out.println("¡Empieza el combate!");
-        while (newPlayer.getHealth() > 0 && newZombie.getHealth() > 0){
+
+        while(newPlayer.getHealth() > 0 && newZombie.getHealth() > 0){
             System.out.println("¡Jugador ataca!");
             newZombie.takeDamage(newPlayer.attack());
 
             if(random.nextInt(2) == 0){
                 newZombie.move();
             } else {
+                System.out.println("¡Zombie ataca!");
                 newPlayer.takeDamage(newZombie.attack());
             }
             turns++;
